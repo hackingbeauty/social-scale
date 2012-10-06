@@ -1,7 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.10'
-gem 'rqrcode-rails3'
+gem 'rqrcode-rails3' # QRCode svg/png renderer for Rails
+gem 'rqrcode' # Ruby library that encodes QR Codes - https://github.com/whomwah/rqrcode
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
