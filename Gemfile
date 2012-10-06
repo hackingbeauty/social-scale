@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.10'
+gem 'rqrcode-rails3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -36,6 +37,7 @@ gem 'sass', '~> 3.1.7'
 gem 'omniauth', '~> 0.2.6'
 
 group :development do
+  gem "debugger"
   gem "nifty-generators"
 end
 
