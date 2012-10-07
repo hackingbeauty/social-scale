@@ -2,3 +2,12 @@
 %p Find me in app/views/users/show.html.haml
 
 = @user.email
+
+%table
+  - @user.qrcode.modules.each_index do |x|
+    %tr
+      - @user.qrcode.modules.each_index do |y|
+        - if @qr.dark?(x,y)
+          %td.black/
+        - else
+          %td.white/

@@ -4,11 +4,11 @@ class UsersController < ApplicationController
     @user = User.find_by_id(authentication[:user_id])
     flash[:notice] = "Signed in successfully"
 
+    debugger
     if @user.qrcode.nil?
-      qr_bits = RQRCode::QRCode.new(@user.email, :size => 4, :level => :h )
-      qr_code = Qrcode.create(:path => qr_bits.to_s)
+      @qr = RQRCode::QRCode.new(@user.email, :size => 4, :level => :h )
 
-      @user.qrcode = qr_code
+      @user.qrcode = Qrcode.create(:path => @qr.to_s)
     end
     
     respond_to do |format|
